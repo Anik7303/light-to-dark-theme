@@ -1,5 +1,13 @@
 :root {
+    --color-white: #fff;
     --color-blue: #2fa1ff;
+    --color-grey: #777;
+    --color-light-grey: #ccc;
+    --color-bluish-white: #f0f8ff;
+    --color-black: #24292d;
+    --color-bluish-black: #323840;
+    --color-light-black: #404852;
+    --color-bluish-medium-white: #e8f5ff;
 }
 
 *,
@@ -21,21 +29,21 @@ body {
 section {
     min-height: 100vh;
     position: relative;
-    background-color: #f0f8ff;
+    background-color: var(--color-bluish-white);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background 0.5s;
 }
 .dark {
-    background-color: #24292d;
+    background-color: var(--color-black);
 }
 
 section .card {
     position: relative;
     width: 300px;
     height: 380px;
-    background-color: #fff;
+    background-color: var(--color-white);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.025);
     border-radius: 15px;
     display: flex;
@@ -45,7 +53,7 @@ section .card {
 }
 
 section.dark .card {
-    background-color: #323840;
+    background-color: var(--color-bluish-black);
 }
 
 section .card .content,
@@ -79,18 +87,19 @@ section .card .imgText h3 {
     font-size: 1.4em;
     line-height: 1.2em;
     text-align: center;
-    color: #2fa1ff;
+    color: var(--color-blue);
 }
 
 section .card .imgText h3 span {
+    font-family: 'Satisfy', cursive;
     font-weight: 400;
-    color: #777;
-    font-size: 0.75em;
+    color: var(--color-grey);
+    font-size: 0.8em;
     transition: color 0.5s;
 }
 
 section.dark .card .imgText h3 span {
-    color: #ccc;
+    color: var(--color-light-grey);
 }
 
 section .card .sci {
@@ -104,8 +113,8 @@ section .card .sci li a {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    color: #2fa1ff;
-    background-color: #e8f5ff;
+    color: var(--color-blue);
+    background-color: var(--color-bluish-medium-white);
     margin: 0 5px;
     display: flex;
     justify-content: center;
@@ -117,11 +126,11 @@ section .card .sci li a {
 }
 
 section.dark .card .sci li a {
-    background-color: #404852;
+    background-color: var(--color-light-black);
 }
 
 section .card .sci li a:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 section .card .sci li a .fa {
@@ -136,7 +145,7 @@ section .card .sci li a::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #2fa1ff;
+    background-color: var(--color-blue);
     border-radius: 50%;
     transform: scale(0);
     transition: 0.5s;
@@ -152,7 +161,7 @@ section .card .sci li a:hover::before {
     right: 20px;
     width: 30px;
     height: 30px;
-    background-color: #e8f5ff;
+    background-color: var(--color-bluish-medium-white);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -161,16 +170,17 @@ section .card .sci li a:hover::before {
 }
 
 .dark .toggle {
-    background-color: #404852;
+    background-color: var(--color-light-black);
 }
 
 .toggle::before {
     content: '\f186';
+    font-size: 20px;
     font-family: fontAwesome;
-    color: #2fa1ff;
+    color: var(--color-blue);
 }
 
 .dark .toggle::before {
     content: '\f185';
-    color: #fff;
+    color: var(--color-white);
 }

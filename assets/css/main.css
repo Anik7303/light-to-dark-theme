@@ -26,7 +26,7 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
-section {
+.sec {
     min-height: 100vh;
     position: relative;
     background-color: var(--color-bluish-white);
@@ -35,11 +35,12 @@ section {
     align-items: center;
     transition: background 0.5s;
 }
+
 .dark {
     background-color: var(--color-black);
 }
 
-section .card {
+.card {
     position: relative;
     width: 300px;
     height: 380px;
@@ -49,22 +50,15 @@ section .card {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     transition: background 0.5s;
 }
 
-section.dark .card {
+.dark .card {
     background-color: var(--color-bluish-black);
 }
 
-section .card .content,
-section .card .imgText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-section .card .imgText .imgBx {
+.card__image-container {
     position: relative;
     width: 120px;
     height: 120px;
@@ -73,7 +67,7 @@ section .card .imgText .imgBx {
     margin-bottom: 15px;
 }
 
-section .card .imgText .imgBx img {
+.card__image {
     position: relative;
     top: 0;
     left: 0;
@@ -82,7 +76,7 @@ section .card .imgText .imgBx img {
     object-fit: cover;
 }
 
-section .card .imgText h3 {
+.card__title {
     font-weight: 500;
     font-size: 1.4em;
     line-height: 1.2em;
@@ -90,7 +84,7 @@ section .card .imgText h3 {
     color: var(--color-blue);
 }
 
-section .card .imgText h3 span {
+.card__title span {
     font-family: 'Satisfy', cursive;
     font-weight: 400;
     color: var(--color-grey);
@@ -98,17 +92,17 @@ section .card .imgText h3 span {
     transition: color 0.5s;
 }
 
-section.dark .card .imgText h3 span {
+.dark .card__title span {
     color: var(--color-light-grey);
 }
 
-section .card .sci {
+.card__social {
     display: flex;
     list-style: none;
     margin-top: 15px;
 }
 
-section .card .sci li a {
+.card__social-link {
     position: relative;
     width: 50px;
     height: 50px;
@@ -125,20 +119,20 @@ section .card .sci li a {
     transition: 0.5s;
 }
 
-section.dark .card .sci li a {
+.dark .card__social-link {
     background-color: var(--color-light-black);
 }
 
-section .card .sci li a:hover {
+.card__social-link:hover {
     color: var(--color-white);
 }
 
-section .card .sci li a .fa {
+.card__social-link .fa {
     position: relative;
     z-index: 100;
 }
 
-section .card .sci li a::before {
+.card__social-link::before {
     content: '';
     position: absolute;
     top: 0;
@@ -151,16 +145,16 @@ section .card .sci li a::before {
     transition: 0.5s;
 }
 
-section .card .sci li a:hover::before {
+.card__social-link:hover::before {
     transform: scale(1);
 }
 
 .toggle {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
     background-color: var(--color-bluish-medium-white);
     border-radius: 50%;
     display: flex;

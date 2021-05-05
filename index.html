@@ -4,48 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Satisfy&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome 5.15.3 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css">
 
-
     <title>Toggle between Light and Dark Theme</title>
 </head>
 <body>
-    <main>
-        <section class="card">
-            <div class="card__image-container">
-                <img class="card__image" src="/assets/images/pic.jpg" alt="Anik Mohammad">
+    <section class="sec">
+        <div class="card">
+            <div class="toggle"></div>
+            <div class="content">
+                <div class="imgText">
+                    <div class="imgBx">
+                        <img src="/assets/images/pic.jpg" alt="Anik Mohammad">
+                    </div>
+                    <h3>Anik Mohammad<br><span>Software Developer</span></h3>
+                </div>
+                <ul class="sci">
+                    <li>
+                        <a class="sci-link" href="#">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sci-link" href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sci-link" href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <p class="card__title">Anik Mohammad</p>
-            <p class="card__subtitle">Software Developer</p>
-            <ul class="card__social-list">
-                <li class="card__social-item">
-                    <a class="card__social-link" href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="card__social-item">
-                    <a class="card__social-link" href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="card__social-item">
-                    <a class="card__social-link" href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </main>
+        </div>
+    </section>
+    <script>
+        const sec = document.querySelector('.sec')
+        const toggle = document.querySelector('.toggle')
+        toggle.onclick = function() {
+            sec.classList.toggle('dark');
+        }
+    </script>
 </body>
 </html>
